@@ -1,0 +1,10 @@
+# В таблице хранятся не все характеристики питомца, а лишь основные, так как при создании 
+# производятся проверки дат последней трапезы, и данные могут быть лишний раз перезаписаны.
+# last_time_ate_milliseconds
+
+create table pets(
+    id int primary key auto_increment,
+    food_eaten int not null,
+    last_time_ate_milliseconds long not null,
+    pet_type enum('CAT', 'CHICKEN', 'PIG') not null
+);
